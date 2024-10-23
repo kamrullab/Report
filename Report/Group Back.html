@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disable Group Back</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/732/732200.png" type="image/png">
+
+    <style>
+        body {
+            background-color: #f5f7fa;
+            color: #2c3e50;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header i {
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+            margin-top: 30px;
+            max-width: 800px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+
+        .btn-style {
+            background-color: #2ecc71;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            max-width: 200px;
+            margin: 15px auto;
+            text-decoration: none;
+        }
+
+        .btn-style:hover {
+            background: linear-gradient(to right, #27ae60, #2980b9);
+            transform: scale(1.05);
+        }
+
+        .text-container {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .instructions {
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .instructions .important {
+            color: red;
+            font-weight: bold;
+        }
+
+        .email-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .email-row i {
+            cursor: pointer;
+            color: #3498db;
+        }
+
+        .video-tutorial {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .video-tutorial a {
+            color: #3498db;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s, transform 0.2s;
+        }
+
+        .video-tutorial a:hover {
+            color: #1abc9c;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 576px) {
+            header h1 {
+                font-size: 1.4rem;
+            }
+
+            .btn-style {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <i class="fas fa-arrow-left" onclick="goBack()"></i>
+    <h1>Disable Group Back</h1>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2 class="mb-4">Reactivate Your Disabled Facebook Group</h2>
+
+        <p><strong>Group Link:</strong> <span>[Insert Your Group Link Here]</span></p>
+
+        <div class="text-container">
+            <p id="messageText">
+                Dear Facebook Support Team,<br>
+                My Facebook group was mistakenly disabled without prior notice. This has disrupted the community I’ve built. 
+                I respectfully request a <span class="important">review and reactivation</span> of my group at the earliest.<br><br>
+                I am providing the group link and relevant screenshots to assist you in this process. 
+                Thank you for your prompt attention to this matter.<br><br>
+                Best regards,<br>
+                [Your Name]
+            </p>
+            <button class="btn-style copy-btn" onclick="copyText()">
+                <i class="fas fa-copy"></i> Copy Message
+            </button>
+        </div>
+
+        <div class="instructions">
+            <h3>Steps to Report:</h3>
+            <ul>
+                <li class="important">Go to the <strong>Report a Problem</strong> section on Facebook.</li>
+                <li>Select <strong>Continue to Report a Problem</strong>.</li>
+                <li>Attach all relevant screenshots using the <strong>Choose File</strong> option.</li>
+                <li>Submit feedback with the subject: <span class="important">"My Group Has Been Disabled"</span>.</li>
+            </ul>
+
+            <h4>Email Support:</h4>
+            <div class="email-row">
+                <span>disabled@support.facebook.com</span> 
+                <i class="fas fa-copy" onclick="copyEmail('disabled@support.facebook.com')"></i>
+            </div>
+            <div class="email-row">
+                <span>support@facebook.com</span> 
+                <i class="fas fa-copy" onclick="copyEmail('support@facebook.com')"></i>
+            </div>
+            <div class="email-row">
+                <span>appeals@facebook.com</span> 
+                <i class="fas fa-copy" onclick="copyEmail('appeals@facebook.com')"></i>
+            </div>
+            <div class="email-row">
+                <span>info@facebook.com</span> 
+                <i class="fas fa-copy" onclick="copyEmail('info@facebook.com')"></i>
+            </div>
+        </div>
+
+        <a href="/" class="btn-style">
+            <i class="fas fa-home"></i> BACK
+        </a>
+    </div>
+
+    <div class="video-tutorial">
+        <h3>Need More Help?</h3>
+        <p>If you need more guidance, watch the following video tutorial:</p>
+        <a href="#" target="_blank">
+            <i class="fas fa-video"></i> Watch Video Tutorial
+        </a>
+    </div>
+</div>
+
+<script>
+    function goBack() {
+        window.location.href = '/';
+    }
+
+    function copyText() {
+        const text = document.getElementById('messageText').innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            const copyButton = document.querySelector('.copy-btn');
+            copyButton.classList.add('clicked');
+            copyButton.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            setTimeout(() => {
+                copyButton.classList.remove('clicked');
+                copyButton.innerHTML = '<i class="fas fa-copy"></i> Copy Message';
+            }, 300);
+        }).catch(err => console.error('Error copying text:', err));
+    }
+
+    function copyEmail(email) {
+        navigator.clipboard.writeText(email).then(() => {
+            alert(`Email copied: ${email}`);
+        }).catch(err => console.error('Error copying email:', err));
+    }
+</script>
+
+</body>
+</html>

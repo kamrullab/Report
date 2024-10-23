@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Account Problem Solution Hub</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" type="image/png">
+
+    <style>
+        body {
+            background-color: #1e1e2f;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background-color: #2c3e50;
+            text-align: center;
+            padding: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        header i {
+            font-size: 2.5rem;
+            color: #1abc9c;
+            cursor: pointer;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .container {
+            padding: 15px;
+        }
+
+        .card {
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Button Hover Effect */
+        .btn:hover {
+            background-color: #7289da;
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Cards */
+        @media (max-width: 768px) {
+            .card-body h5 {
+                font-size: 1.2rem;
+            }
+
+            .card i {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card i {
+                font-size: 2.5rem;
+            }
+
+            .card-body h5 {
+                font-size: 1rem;
+            }
+        }
+
+        /* Icon Colors */
+        .card .icon-red { color: #e74c3c; }
+        .card .icon-blue { color: #3498db; }
+        .card .icon-green { color: #2ecc71; }
+        .card .icon-yellow { color: #f1c40f; }
+        .card .icon-purple { color: #9b59b6; }
+        .card .icon-dark-blue { color: #34495e; }
+        .card .icon-orange { color: #e67e22; }
+        .card .icon-teal { color: #1abc9c; }
+        .card .icon-pink { color: #e84393; }
+        .card .icon-dark-green { color: #27ae60; }
+        .card .icon-light-blue { color: #2980b9; }
+        .card .icon-dark-red { color: #c0392b; }
+
+        .social-hub {
+            background-color: #2c3e50;
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+            border-radius: 15px;
+        }
+
+        .social-hub a {
+            color: #1abc9c;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .social-hub a:hover {
+            transform: scale(1.3);
+            color: #ff7675;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <i class="fas fa-home" onclick="reloadPage()"></i>
+    <h1>Social Account Problem Solution Hub</h1>
+</header>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- 12 Fully Responsive Cards -->
+        <div class="col-md-4 col-sm-6">
+            <div class="card text-center shadow">
+                <i class="fas fa-bullhorn fa-5x mt-4 icon-red"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Defamation Report</h5>
+                    <a href="Report/Defamation.html" class="btn btn-primary mt-3">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card text-center shadow">
+                <i class="fas fa-users-slash fa-5x mt-4 icon-blue"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Disable Group Back</h5>
+                    <a href="Report/Group Back.html" class="btn btn-primary mt-3">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card text-center shadow">
+                <i class="fas fa-smile fa-5x mt-4 icon-green"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Emoji Account Create</h5>
+                    <a href="#" class="btn btn-primary mt-3">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card text-center shadow">
+                <i class="fab fa-facebook fa-5x mt-4 icon-facebook"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Facebook All Links</h5>
+                    <a href="Report/All Links.html" class="btn btn-primary mt-3">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card text-center shadow">
+                <i class="fas fa-user-edit fa-5x mt-4 icon-purple"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Facebook Profile Issue Fixed</h5>
+                    <a href="Report/Facebook Profile Issue.html" class="btn btn-primary mt-3">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card text-center shadow">
+                <i class="fas fa-id-badge fa-5x mt-4 icon-dark-blue"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Facebook Username Account</h5>
+                    <a href="report/FUA.html" class="btn btn-primary mt-3">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card text-center shadow">
+                <i class="fas fa-envelope-open-text fa-5x mt-4 icon-orange"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Mail Unsend</h5>
+                    <a href="Report/Mail Unsend.html" class="btn btn-primary mt-3">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card text-center shadow">
+                <i class="fas fa-edit fa-5x mt-4 icon-teal"></i>
+                <div class="card-body">
+                    <h5 class="card-title">PLP Edit</h5>
+                    <a href="#" class="btn btn-primary mt-3">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card text-center shadow">
+                <i class="fas fa-money-bill-wave fa-5x mt-4 icon-pink"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Restricted Monetization Issue</h5>
+                    <a href="Report/Restricted Monetization Issue.html" class="btn btn-primary mt-3">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card text-center shadow">
+                <i class="fab fa-tiktok fa-5x mt-4 icon-light-blue"></i>
+                <div class="card-body">
+                    <h5 class="card-title">TikTok Report Privacy Violation</h5>
+                    <a href="Report/TikTok Report Privacy Violation.html" class="btn btn-primary mt-3">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="card text-center shadow">
+                <i class="fas fa-unlock-alt fa-5x mt-4 icon-dark-red"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Unblock Action Block</h5>
+                    <a href="Report/Unblock Action Block.html" class="btn btn-primary mt-3">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Get in Touch Section -->
+<div class="social-hub">
+    <h2>Get in Touch</h2>
+    <a href="mailto:Mr.kamrul61@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <p><strong>Date & Time:</strong> <span id="datetime"></span></p>
+</div>
+
+<script>
+    function updateDateTime() {
+        document.getElementById('datetime').innerText = new Date().toLocaleString();
+    }
+    setInterval(updateDateTime, 1000);
+
+    function reloadPage() {
+        window.location.href = '/';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Issue Resolution</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/733/733547.png" type="image/png">
+
+    <style>
+        body {
+            background-color: #f5f7fa;
+            color: #2c3e50;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background-color: #3498db;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header i {
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+            margin-top: 30px;
+            max-width: 800px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+
+        .btn-style {
+            background-color: #27ae60;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.2s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            max-width: 200px;
+            margin: 15px auto;
+            text-decoration: none;
+        }
+
+        .btn-style:hover {
+            background: linear-gradient(to right, #2ecc71, #2980b9);
+            transform: scale(1.05);
+        }
+
+        .copy-btn.clicked {
+            background-color: #e74c3c !important;
+        }
+
+        .text-container {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .steps-guide {
+            margin-top: 30px;
+        }
+
+        .highlight-red {
+            color: red;
+            font-weight: bold;
+        }
+
+        .video-tutorial {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .video-tutorial a {
+            color: #3498db;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s, transform 0.2s;
+        }
+
+        .video-tutorial a:hover {
+            color: #1abc9c;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 576px) {
+            header h1 {
+                font-size: 1.4rem;
+            }
+
+            .btn-style {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <i class="fas fa-arrow-left" onclick="goBack()"></i>
+    <h1>Profile Issue Resolution</h1>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2 class="mb-4">Resolve Facebook Profile Issues</h2>
+
+        <p>
+            <strong>Link:</strong> 
+            <a href="https://www.facebook.com/help/contact/357439354283890" target="_blank" style="text-decoration: none;">
+                Report Profile Issues to Facebook
+            </a>
+        </p>
+
+        <h3 class="mt-4">Step-by-Step Guide to Submit Your Report</h3>
+        <ol class="steps-guide">
+            <li>Click the <strong class="highlight-red">"Report Profile Issues"</strong> link above.</li>
+            <li>Log in to your Facebook account if required.</li>
+            <li>Attach relevant screenshots and documents.</li>
+            <li><strong class="highlight-red">Select the issue type</strong> (e.g., Profile Restriction, Login Issue).</li>
+            <li>Click <strong class="highlight-red">Submit</strong> to finalize your report.</li>
+        </ol>
+
+        <h3 class="mt-4">Additional Messages</h3>
+        
+        <div class="text-container">
+            <p id="message1">
+                Dear Facebook Support Team,<br>
+                I shared content that unintentionally violated your standards. I apologize and kindly request 
+                that you remove the restrictions. This issue will not happen again.<br><br>
+                Thank you for your support.<br>
+                [Your Name]
+            </p>
+            <button class="btn-style copy-btn" onclick="copyText('message1')">
+                <i class="fas fa-copy"></i> Copy Message 1
+            </button>
+        </div>
+
+        <div class="text-container">
+            <p id="message2">
+                Dear Facebook Team,<br>
+                I regret sharing content that didn't meet community standards. Please remove the restrictions 
+                from my account. I assure you it won't happen again.<br><br>
+                Thank you for your time and assistance.<br>
+                [Your Name]
+            </p>
+            <button class="btn-style copy-btn" onclick="copyText('message2')">
+                <i class="fas fa-copy"></i> Copy Message 2
+            </button>
+        </div>
+
+        <a href="/" class="btn-style">
+            <i class="fas fa-home" onclick="goBack()"></i> BACK
+        </a>
+    </div>
+
+    <div class="video-tutorial">
+        <h3>Need More Help?</h3>
+        <p>If you need further guidance, watch the following video tutorial:</p>
+        <a href="#" target="_blank">
+            <i class="fas fa-video"></i> Watch Video Tutorial
+        </a>
+    </div>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function copyText(elementId) {
+        const text = document.getElementById(elementId).innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            const copyButton = document.querySelector(`button[onclick="copyText('${elementId}')"]`);
+            copyButton.classList.add('clicked');
+            copyButton.innerHTML = '<i class="fas fa-check"></i> Copied!';
+
+            setTimeout(() => {
+                copyButton.classList.remove('clicked');
+                copyButton.innerHTML = '<i class="fas fa-copy"></i> Copy Message';
+            }, 300);
+        }).catch(err => console.error('Error copying text: ', err));
+    }
+</script>
+
+</body>
+</html>
